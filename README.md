@@ -1,1 +1,1 @@
-# Kotlin-workshop-frontend
+# Kotlin-workshop
