@@ -6,7 +6,7 @@ object Constants {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
 
-    fun getQuestions(): ArrayList<Question> {
+    fun getQuestions(): List<Question> {
         return listOf(
             Question(
                 1, "What country does this flag belong to?",

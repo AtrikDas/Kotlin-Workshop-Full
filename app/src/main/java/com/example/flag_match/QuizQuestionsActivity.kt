@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_quiz_questions.*
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition = 1
-    private var mQuestionsList: ArrayList<Question>? = null
+    private var mQuestionsList: List<Question>? = null
 
     private var mSelectedOptionPosition = 0
     private var mCorrectAnswers = 0
@@ -123,13 +123,33 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     //A function for answer view which is used to highlight the answer is wrong or right.
     private fun answerView(answer: Int, drawableView: Int) {
-        val selected_tv_option = when (answer) {
-            1 -> tv_option_one
-            2 -> tv_option_two
-            3 -> tv_option_three
-            4 -> tv_option_four 
+        when (answer) {
+
+            1 -> {
+                tv_option_one.background = ContextCompat.getDrawable(
+                    this,
+                    drawableView
+                )
+            }
+            2 -> {
+                tv_option_two.background = ContextCompat.getDrawable(
+                    this,
+                    drawableView
+                )
+            }
+            3 -> {
+                tv_option_three.background = ContextCompat.getDrawable(
+                    this,
+                    drawableView
+                )
+            }
+            4 -> {
+                tv_option_four.background = ContextCompat.getDrawable(
+                    this,
+                    drawableView
+                )
+            }
         }
-        selected_tv_option.background = ContextCompat.getDrawable(this, drawableView)
     }
 
 
